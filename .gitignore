@@ -1,0 +1,6 @@
+dist/
+*.pyc
+.venv
+.coverage
+coverage.xml
+*_cache/
