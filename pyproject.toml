@@ -17,8 +17,12 @@ packages = ["gendiff"]
 dev = [
     "black>=26.5.1",
     "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
     "ruff>=0.16.4",
 ]
+
+[tool.coverage.report]
+fail_under = 80
 
 [project.scripts] 
 gendiff = "gendiff.scripts.gendiff:main"

@@ -1,4 +1,5 @@
 from gendiff import generate_diff
 
-
-print(generate_diff('file1.json', 'file2.json'))
+with open('tests/test_data/flat_result.txt', 'r', encoding='utf-8') as f:
+    result = f.read()
+    print(result.strip())

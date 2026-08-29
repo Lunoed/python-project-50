@@ -15,6 +15,7 @@ def read_file(filename: str) -> str:
         data = json.load(f)
     return data
 
+
 def generate_diff(filename1: str, filename2: str) -> str:
     data1: dict = read_file(filename1)
     data2: dict = read_file(filename2)
@@ -29,13 +30,10 @@ def generate_diff(filename1: str, filename2: str) -> str:
             else:
                 result.append(f' - {key}: {data1[key]}\n')
                 result.append(f' + {key}: {data2[key]}\n')
-        elif (key in data1.keys()) and not (key in data2.keys()):
+        elif key in data1.keys() and key not in data2.keys():
             result.append(f' - {key}: {data1[key]}\n')
         else:
             result.append(f' + {key}: {data2[key]}\n')
     string = ''.join(result)
     answer = '{\n' + string + '}'
     return answer.strip()
-
-
-#print(generate_diff('file1.json', 'file2.json'))

@@ -1,0 +1,22 @@
+name: gendiff_check
+on: push
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v7
+            - name: Setup Python
+              uses: actions/setup-python@v7
+              with:
+                python-version: '3.14'
+            - name: Install dependencies
+              run: |
+                pip install uv
+                make install
+            - name: Run linter and tests
+              run: |
+                make lint
+                make tests
+            - name: Run tests coverage
+              run: |
+                make test-coverage
