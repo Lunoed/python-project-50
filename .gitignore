@@ -4,3 +4,5 @@ dist/
 .coverage
 coverage.xml
 *_cache/
+.cast
+main.py

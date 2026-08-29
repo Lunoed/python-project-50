@@ -2,13 +2,13 @@ install:
 	uv venv
 
 build:
-	vu build
+	uv build
 
 package-install:
-	uv tool install --force sdist/*.whl
+	uv tool install --force dist/*.whl
 
 lint:
-	uv run ruff check ...
+	uv run ruff check gendiff
 
 black:
 	black .

@@ -1,6 +1,4 @@
-def main():
-    print("Hello from python-project-50!")
+from gendiff import generate_diff
 
 
-if __name__ == "__main__":
-    main()
+print(generate_diff('file1.json', 'file2.json'))
