@@ -2,6 +2,8 @@
 
 [![hexlet-check](https://github.com/Lunoed/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Lunoed/python-project-50/actions)
 
+[![gendiff_check](https://github.com/Lunoed/python-project-50/actions/workflows/gendiff_check.yml/badge.svg)](https://github.com/Lunoed/python-project-50/actions/workflows/gendiff_check.yml)
+
 В этом проекте отрабатывается работа с коллекциями. Изучаются способы построения и обхода деревьев. Вы познакомитесь с разными форматами данных (JSON, YAML), научитесь их парсить и формировать. Начнете писать тесты (pytest) и освоите разработку через них. Познакомитесь с непрерывной интеграцией (CI) и элементами экстремального программирования (XP)
 
 Учебный проект Хекслета: https://ru.hexlet.io/programs/python
