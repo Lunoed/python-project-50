@@ -1,4 +1,5 @@
 import json
+import yaml
 import os
 
 
@@ -9,10 +10,26 @@ def get_data_path(filename: str) -> str:
                 return os.path.abspath(os.path.join(root, filename))
 
 
+def determine_format(filename: str) -> str:
+    format = filename[-4:]
+    if format == '.yml' or format == 'yaml':
+        return 'yml'
+    elif format == 'json':
+        return 'json'
+    else:
+        print('Unsupported format!')
+        print('Program fort only with json and yml formats.')
+        raise
+
+
 def read_file(filename: str) -> str:
     path = get_data_path(filename)
+    format = determine_format(filename)
     with open(path, "r", encoding="utf-8") as f:
-        data = json.load(f)
+        if format == 'json':
+            data = json.load(f)
+        elif format == 'yml':
+            data = yaml.safe_load(f)
     return data
 
 

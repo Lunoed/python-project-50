@@ -1,3 +1,5 @@
+.PHONY: tests
+
 install:
 	uv sync
 
@@ -13,8 +15,9 @@ lint:
 black:
 	black .
 	
-tests:
-	uv run pytest
-
 test-coverage:
 	uv run pytest --cov=gendiff --cov-report term --cov-report xml
+
+tests:
+	uv run pytest
+	
