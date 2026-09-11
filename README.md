@@ -28,6 +28,10 @@ cd python-project-50
 
 [![asciicast](https://asciinema.org/a/Qw5FAaSG2KC9dDdE.svg)](https://asciinema.org/a/Qw5FAaSG2KC9dDdE)
 
+Работа программы с плоскими yaml файлами
+
+[![asciicast](https://asciinema.org/a/TcOHAsG1Jsx1EXyZ.svg)](https://asciinema.org/a/TcOHAsG1Jsx1EXyZ)
+
 ---
 
 <details>
