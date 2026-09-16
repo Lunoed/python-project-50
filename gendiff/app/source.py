@@ -3,6 +3,7 @@ import os
 
 import yaml
 
+from .plain import format_plain
 from .stylish import format_stylish
 
 
@@ -91,4 +92,6 @@ def generate_diff(file1: str, file2: str, format_name="stylish"):
     diff = find_diff(file1, file2)
     if format_name == "stylish":
         result = format_stylish(diff)
+    elif format_name == "plain":
+        result = format_plain(diff)
     return result

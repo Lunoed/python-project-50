@@ -36,6 +36,10 @@ cd python-project-50
 
 [![asciicast](https://asciinema.org/a/DSar9krlcWDPAk7Y.svg)](https://asciinema.org/a/DSar9krlcWDPAk7Y)
 
+Программа умеет делать "плоский" вывод сводки различий. Для этого нужно указывать формат - "plain"
+
+[![asciicast](https://asciinema.org/a/aCGQh7eXIf1Ccyqz.svg)](https://asciinema.org/a/aCGQh7eXIf1Ccyqz)
+
 ---
 
 <details>
