@@ -4,22 +4,36 @@
 
 [![gendiff_check](https://github.com/Lunoed/python-project-50/actions/workflows/gendiff_check.yml/badge.svg)](https://github.com/Lunoed/python-project-50/actions/workflows/gendiff_check.yml)
 
-В этом проекте отрабатывается работа с коллекциями. Изучаются способы построения и обхода деревьев. Вы познакомитесь с разными форматами данных (JSON, YAML), научитесь их парсить и формировать. Начнете писать тесты (pytest) и освоите разработку через них. Познакомитесь с непрерывной интеграцией (CI) и элементами экстремального программирования (XP)
+Данный репозитоорий содержит код программы GENDIFF - утилита предназначена для нахождения различий между 2 файлами (плоскими либо со вложенной структурой) форматов JSON и YAML. 
+Есть три формата отображения:
+    - stylish (вложенный)
+    [![asciicast](https://asciinema.org/a/DSar9krlcWDPAk7Y.svg)](https://asciinema.org/a/DSar9krlcWDPAk7Y)
 
-Учебный проект Хекслета: https://ru.hexlet.io/programs/python
-Как это должно работать: https://asciinema.org/a/Pe6QypnLEmFWssNAjCOJN1iii
+    - plain (плоский)
+    [![asciicast](https://asciinema.org/a/aCGQh7eXIf1Ccyqz.svg)](https://asciinema.org/a/aCGQh7eXIf1Ccyqz)
 
+    - json (в формате json-файла)
+    ...
 ## Стек
 
 - Python
 
 ## Установка
+Для установки данной программы необходима утилита uv.
+Установить её можно следующим образом:
 
-<!-- Опишите установку: клонирование, зависимости, переменные окружения -->
+```bash
+pip install uv
+```
+(Более подробную инструкцию можно почитать на официальном сайте: https://docs.astral.sh/uv/getting-started/installation/#standalone-installer)
 
 ```bash
 git clone https://github.com/Lunoed/python-project-50.git
+
 cd python-project-50
+
+make install
+
 ```
 
 ## Использование
@@ -40,14 +54,11 @@ cd python-project-50
 
 [![asciicast](https://asciinema.org/a/aCGQh7eXIf1Ccyqz.svg)](https://asciinema.org/a/aCGQh7eXIf1Ccyqz)
 
+Также есть возможность вывести результат в формате json. Для этого нужно указать формат - "json"
+
+[![asciicast](https://asciinema.org/a/IvV6EAA6kFvC2Ba4.svg)](https://asciinema.org/a/IvV6EAA6kFvC2Ba4)
+
 ---
-
-<details>
-<summary>Автоматические тесты Хекслета</summary>
-
-Тесты запускаются на каждый коммит. За запуск отвечает файл `.github/workflows/hexlet-check.yml` — не удаляйте и не переименовывайте ни его, ни репозиторий.
-
-</details>
 
 ## О Хекслете
 

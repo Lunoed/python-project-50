@@ -3,6 +3,7 @@ import os
 
 import yaml
 
+from .json import to_json
 from .plain import format_plain
 from .stylish import format_stylish
 
@@ -94,4 +95,6 @@ def generate_diff(file1: str, file2: str, format_name="stylish"):
         result = format_stylish(diff)
     elif format_name == "plain":
         result = format_plain(diff)
+    elif format_name == "json":
+        result = to_json(diff)
     return result
