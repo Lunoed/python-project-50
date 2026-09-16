@@ -15,7 +15,7 @@
     ...
 ## Стек
 
-- Python
+- Python 3.14
 
 ## Установка дополнительной утилиты
 Для установки данной программы необходима утилита uv.
@@ -28,13 +28,21 @@ pip install uv
 
 ## Скачивание репозитория и установка программы
 
+- Установка пакетов:
+
 ```bash
-git clone https://github.com/Lunoed/python-project-50.git
-
-cd python-project-50
-
 make install
+```
+- Создание дистрибутива:
 
+```bash
+make build
+```
+
+- Установка проекта в систему:
+
+```bash
+make package-istall
 ```
 ## Краткий пример вывода
 ``` bash
