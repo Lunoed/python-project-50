@@ -1,7 +1,7 @@
 import argparse
 import sys
 
-from .source import generate_diff
+from ..app.source import generate_diff
 
 
 def parse_args(args=None):
@@ -15,12 +15,16 @@ def parse_args(args=None):
     if args is None:
         args = sys.argv[1:]
     return parser.parse_args(args)
-    
+
 
 def main():
     args = parse_args()
     if args.first_file and args.second_file:
-        print(generate_diff(args.first_file, args.second_file))
+        _format = args.format
+        if _format:
+            print(generate_diff(args.first_file, args.second_file, _format))
+        else:
+            print(generate_diff(args.first_file, args.second_file))
 
 
 if __name__ == "__main__":

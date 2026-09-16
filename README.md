@@ -32,6 +32,10 @@ cd python-project-50
 
 [![asciicast](https://asciinema.org/a/TcOHAsG1Jsx1EXyZ.svg)](https://asciinema.org/a/TcOHAsG1Jsx1EXyZ)
 
+Работа программы с вложенными json и yaml файлами
+
+[![asciicast](https://asciinema.org/a/DSar9krlcWDPAk7Y.svg)](https://asciinema.org/a/DSar9krlcWDPAk7Y)
+
 ---
 
 <details>
