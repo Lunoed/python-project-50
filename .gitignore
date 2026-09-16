@@ -8,3 +8,5 @@ coverage.xml
 main.py
 .xml
 old_README.md
+token.txt
+__pycache__
