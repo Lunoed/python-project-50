@@ -4,7 +4,7 @@ dist/
 .coverage
 coverage.xml
 *_cache/
-.cast
+*.cast
 main.py
 .xml
 old_README.md
