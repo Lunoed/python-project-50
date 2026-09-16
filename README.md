@@ -4,28 +4,29 @@
 
 [![gendiff_check](https://github.com/Lunoed/python-project-50/actions/workflows/gendiff_check.yml/badge.svg)](https://github.com/Lunoed/python-project-50/actions/workflows/gendiff_check.yml)
 
-Данный репозитоорий содержит код программы GENDIFF - утилита предназначена для нахождения различий между 2 файлами (плоскими либо со вложенной структурой) форматов JSON и YAML. 
+Данный репозиторий содержит код программы GENDIFF - утилита, предназначенная для нахождения различий между 2 файлами (плоскими либо со вложенной структурой) форматов JSON и YAML. 
 Есть три формата отображения:
-    - stylish (вложенный)
-    [![asciicast](https://asciinema.org/a/DSar9krlcWDPAk7Y.svg)](https://asciinema.org/a/DSar9krlcWDPAk7Y)
 
-    - plain (плоский)
-    [![asciicast](https://asciinema.org/a/aCGQh7eXIf1Ccyqz.svg)](https://asciinema.org/a/aCGQh7eXIf1Ccyqz)
+- stylish (вложенный)
 
-    - json (в формате json-файла)
+- plain (плоский)
+
+- json 
     ...
 ## Стек
 
 - Python
 
-## Установка
+## Установка дополнительной утилиты
 Для установки данной программы необходима утилита uv.
 Установить её можно следующим образом:
 
 ```bash
 pip install uv
 ```
-(Более подробную инструкцию можно почитать на официальном сайте: https://docs.astral.sh/uv/getting-started/installation/#standalone-installer)
+(Более подробную инструкцию с альтернативными способами установки можно почитать на официальном сайте: https://docs.astral.sh/uv/getting-started/installation/#standalone-installer)
+
+## Скачивание репозитория и установка программы
 
 ```bash
 git clone https://github.com/Lunoed/python-project-50.git
@@ -34,6 +35,14 @@ cd python-project-50
 
 make install
 
+```
+## Краткий пример вывода
+``` bash
+gendif -f plain file1.json file2.json
+Property 'common.follow' was added with value: false
+Property 'common.setting2' was removed
+Property 'common.setting3' was updated. From true to null
+...
 ```
 
 ## Использование
@@ -60,6 +69,3 @@ make install
 
 ---
 
-## О Хекслете
-
-[Хекслет](https://ru.hexlet.io/) — школа программирования: авторские программы обучения с практикой, поддержкой наставников и реальными проектами, которые остаются в резюме. Этот репозиторий — один из таких проектов.
