@@ -27,6 +27,12 @@ pip install uv
 (Более подробную инструкцию с альтернативными способами установки можно почитать на официальном сайте: https://docs.astral.sh/uv/getting-started/installation/#standalone-installer)
 
 ## Скачивание репозитория и установка программы
+- Скачивание репозитория:
+
+```bash
+git clone https://github.com/Lunoed/python-project-50.git
+cd python-project-50
+```
 
 - Установка пакетов:
 
