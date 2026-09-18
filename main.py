@@ -1,8 +1,4 @@
-from gendiff.app.source import find_diff
-import json
+name = '/file1.yml'
 
-
-result = find_diff('file3.json', "file4.json")
-
-with open('tests/test_data/nested_result.json', 'w', encoding="utf-8") as file:
-    json.dump(result, file, ensure_ascii=False, indent=2)
+new = name.split('/')
+print(new[-1])

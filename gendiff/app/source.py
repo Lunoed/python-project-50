@@ -9,6 +9,9 @@ from .stylish import format_stylish
 
 
 def get_data_path(filename: str) -> str:
+    if '/' in filename:
+        new_name = filename.split('/')
+        filename = new_name[-1]
     for root, _, files in os.walk(os.getcwd()):
         for name in files:
             if name == filename:
