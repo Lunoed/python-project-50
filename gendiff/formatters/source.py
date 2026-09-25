@@ -81,7 +81,7 @@ def find_diff(filename1: str, filename2: str):
     return build(data1, data2)
 
 
-def generate_diff(file1: str, file2: str, format_name: str):
+def generate_diff(file1: str, file2: str, format_name: str = "stylish"):
     diff = find_diff(file1, file2)
     if format_name == "stylish":
         result = format_stylish(diff)

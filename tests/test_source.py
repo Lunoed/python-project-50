@@ -2,12 +2,12 @@ from gendiff import read_file, determine_format
 
 
 def test_format_yaml():
-    assert determine_format("filename.yml") == "yml"
-    assert determine_format("filename.yaml") == "yml"
+    assert determine_format("filename.yml") == ".yml"
+    assert determine_format("filename.yaml") == ".yaml"
 
 
 def test_format_json():
-    assert determine_format("filename.json") == "json"
+    assert determine_format("filename.json") == ".json"
 
 
 def test_read_file():
