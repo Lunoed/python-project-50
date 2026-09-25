@@ -1,7 +1,7 @@
 import argparse
 import sys
 
-from ..app.source import generate_diff
+from ..formatters.source import generate_diff
 
 
 def parse_args(args=None):
@@ -11,7 +11,9 @@ def parse_args(args=None):
     )
     parser.add_argument("first_file", type=str)
     parser.add_argument("second_file", type=str)
-    parser.add_argument("-f", "--format", help="set format of output")
+    parser.add_argument(
+        "-f", "--format", help="set format of output", default="stylish"
+    )
     if args is None:
         args = sys.argv[1:]
     return parser.parse_args(args)
@@ -21,10 +23,7 @@ def main():
     args = parse_args()
     if args.first_file and args.second_file:
         _format = args.format
-        if _format:
-            print(generate_diff(args.first_file, args.second_file, _format))
-        else:
-            print(generate_diff(args.first_file, args.second_file))
+        print(generate_diff(args.first_file, args.second_file, _format))
 
 
 if __name__ == "__main__":

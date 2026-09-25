@@ -11,13 +11,13 @@ def test_format_json():
 
 
 def test_read_file():
-    assert read_file("file1.json") == {
+    assert read_file("tests/test_data/file1.json") == {
         "host": "hexlet.io",
         "timeout": 50,
         "proxy": "123.234.53.22",
         "follow": False,
     }
-    assert read_file("file1.yml") == {
+    assert read_file("tests/test_data/file1.yml") == {
         "host": "hexlet.io",
         "timeout": 50,
         "proxy": "123.234.53.22",
@@ -26,5 +26,9 @@ def test_read_file():
 
 
 def test_third_and_fourth_files():
-    assert read_file("file3.json") == read_file("file3.yml")
-    assert read_file("file4.json") == read_file("file4.yml")
+    assert read_file("tests/test_data/file3.json") == read_file(
+        "tests/test_data/file3.yml"
+    )
+    assert read_file("tests/test_data/file4.json") == read_file(
+        "tests/test_data/file4.yml"
+    )

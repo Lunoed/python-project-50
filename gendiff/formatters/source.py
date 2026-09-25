@@ -7,36 +7,25 @@ from .json import to_json
 from .plain import format_plain
 from .stylish import format_stylish
 
-
-def get_data_path(filename: str) -> str:
-    if '/' in filename:
-        new_name = filename.split('/')
-        filename = new_name[-1]
-    for root, _, files in os.walk(os.getcwd()):
-        for name in files:
-            if name == filename:
-                return os.path.abspath(os.path.join(root, filename))
+FORMATS = [".yml", ".yaml", ".json"]
 
 
 def determine_format(filename: str) -> str:
-    _format = filename[-4:]
-    if _format == ".yml" or _format == "yaml":
-        return "yml"
-    elif _format == "json":
-        return "json"
+    _, _format = os.path.splitext(filename)
+    if _format in FORMATS:
+        return _format
     else:
         print("Unsupported format!")
         print("Program works only with json and yml formats.")
         raise ValueError(f"Unsupported file format: {filename}")
 
 
-def read_file(filename: str) -> str:
-    path = get_data_path(filename)
-    format = determine_format(filename)
-    with open(path, "r", encoding="utf-8") as f:
-        if format == "json":
+def read_file(filepath: str) -> str:
+    format = determine_format(filepath)
+    with open(filepath, "r", encoding="utf-8") as f:
+        if format == ".json":
             data = json.load(f)
-        elif format == "yml":
+        elif format == ".yml" or format == ".yaml":
             data = yaml.safe_load(f)
     return data
 
@@ -92,7 +81,7 @@ def find_diff(filename1: str, filename2: str):
     return build(data1, data2)
 
 
-def generate_diff(file1: str, file2: str, format_name="stylish"):
+def generate_diff(file1: str, file2: str, format_name: str):
     diff = find_diff(file1, file2)
     if format_name == "stylish":
         result = format_stylish(diff)
