@@ -50,9 +50,9 @@ make build
 ```bash
 make package-istall
 ```
-## Краткий пример вывода
+## Краткий пример использования программы и вывода
 ``` bash
-gendif -f plain file1.json file2.json
+gendif -f plain path/to/file1.json path/to/file2.json
 Property 'common.follow' was added with value: false
 Property 'common.setting2' was removed
 Property 'common.setting3' was updated. From true to null
@@ -67,19 +67,19 @@ Property 'common.setting3' was updated. From true to null
 
 Работа программы с плоскими yaml файлами
 
-[![asciicast](https://asciinema.org/a/TcOHAsG1Jsx1EXyZ.svg)](https://asciinema.org/a/TcOHAsG1Jsx1EXyZ)
+[![asciicast](https://asciinema.org/a/tMezCi6OrelGos6o.svg)](https://asciinema.org/a/tMezCi6OrelGos6o)
 
 Работа программы с вложенными json и yaml файлами
 
-[![asciicast](https://asciinema.org/a/DSar9krlcWDPAk7Y.svg)](https://asciinema.org/a/DSar9krlcWDPAk7Y)
+[![asciicast](https://asciinema.org/a/m56FWTJaBt5Q6sFv.svg)](https://asciinema.org/a/m56FWTJaBt5Q6sFv)
 
 Программа умеет делать "плоский" вывод сводки различий. Для этого нужно указывать формат - "plain"
 
-[![asciicast](https://asciinema.org/a/aCGQh7eXIf1Ccyqz.svg)](https://asciinema.org/a/aCGQh7eXIf1Ccyqz)
+[![asciicast](https://asciinema.org/a/2lPgwdtSnAJlhiu9.svg)](https://asciinema.org/a/2lPgwdtSnAJlhiu9)
 
 Также есть возможность вывести результат в формате json. Для этого нужно указать формат - "json"
 
-[![asciicast](https://asciinema.org/a/IvV6EAA6kFvC2Ba4.svg)](https://asciinema.org/a/IvV6EAA6kFvC2Ba4)
+[![asciicast](https://asciinema.org/a/Y9wCuxiNy1LfaUvd.svg)](https://asciinema.org/a/Y9wCuxiNy1LfaUvd)
 
 ---
 
